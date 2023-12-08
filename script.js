@@ -112,5 +112,18 @@ console.log(`Net Total: ${totalNetFu()}`);
 // averageChangeFu : calculate the average value
 
 const averageChangeFu = () => {
+  let changes = [];
 
+  for (let i = 1; i < totalMonthsFu(); i++) {
+    let change = finances[i][1] - finances[i - 1][1];
+    changes.push(change);
+  };
+
+  let averageChange = changes.reduce(
+    (acc, val) => {
+      return acc + val;
+    }, 0) / (totalMonthsFu() - 1);
+    return averageChange.toFixed(2);
 };
+
+console.log(`Average Change: ${averageChangeFu()}`);
