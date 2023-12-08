@@ -86,3 +86,14 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+// monthCounter function
+
+const monthCounter = () => {
+  return finances.length;
+}
+
+// storing the value of monthCounter
+
+let month = monthCounter();
+console.log(`Total Months: ${month}`);
