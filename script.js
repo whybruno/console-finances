@@ -87,13 +87,30 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// monthCounter function
+// totalMonthsFu function : calculate the number of months
 
-const monthCounter = () => {
+const totalMonthsFu = () => {
   return finances.length;
-}
+};
 
-// storing the value of monthCounter
+console.log(`Total Months: ${totalMonthsFu()}`);
 
-let month = monthCounter();
-console.log(`Total Months: ${month}`);
+// totalNetFu funtion : calculate the total net value
+
+const totalNetFu = () => {
+  let sum = 0;
+
+  sum = finances.reduce(
+    (acc, val) => {
+      return acc + val[1];
+    }, 0);
+    return sum;
+};
+
+console.log(`Net Total: ${totalNetFu()}`);
+
+// averageChangeFu : calculate the average value
+
+const averageChangeFu = () => {
+
+};

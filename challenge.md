@@ -16,7 +16,7 @@ Your task is to write JavaScript code that analyzes the records to calculate eac
 
 * The total number of months included in the dataset. `DONE`
 
-* The net total amount of Profit/Losses over the entire period.
+* The net total amount of Profit/Losses over the entire period. `DONE`
 
 * The average of the **changes** in Profit/Losses over the entire period.
   * You will need to track what the total change in Profit/Losses are from month to month and then find the average.
