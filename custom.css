@@ -1,0 +1,8 @@
+main {
+  background-color: blue;
+}
+
+.container {
+  max-width: 768px !important;
+}
+
