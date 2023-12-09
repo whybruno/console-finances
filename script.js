@@ -198,10 +198,18 @@ let lossMonthObj = consoleDecrease.lossMonth;
 
 console.log(`Greatest Decrease: ${lossMonthObj} (${profitLossObj})`);
 
+// format number to US dollar
+
+let USD = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+});
+
 // display results of functions to index.html
 
-  document.getElementById('totalMonths').innerHTML = totalMonthsFu();
-  document.getElementById('totalNet').innerHTML = totalNetFu();
-  document.getElementById('averageChange').innerHTML = averageChangeObj;
-  document.getElementById('greatestIncrease').innerHTML = `${gainMonthObj} (${profitGainObj})`;
-  document.getElementById('greatestDecrease').innerHTML = `${lossMonthObj} (${profitLossObj})`;
+document.getElementById('totalMonths').innerHTML = `${totalMonthsFu()} mos`;
+document.getElementById('totalNet').innerHTML = `${USD.format(totalNetFu())}`;
+document.getElementById('averageChange').innerHTML = USD.format(averageChangeObj);
+document.getElementById('greatestIncrease').innerHTML = `${gainMonthObj} (${USD.format(profitGainObj)})`;
+document.getElementById('greatestDecrease').innerHTML = `${lossMonthObj} (${USD.format(profitLossObj)})`;
+
