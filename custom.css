@@ -2,3 +2,16 @@
   max-width: 768px !important;
 }
 
+.text-violet {
+  color: #712cf9;
+}
+
+a {
+  color: #FFFFFF;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
