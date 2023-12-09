@@ -129,7 +129,7 @@ const averageChangeFu = () => {
     };
 };
 
-// consoleAverage : return object values
+// consoleAverage : return averageChangeFu object values
 
 const consoleAverage = averageChangeFu();
 let changesObj = consoleAverage.changes;
@@ -138,7 +138,7 @@ let averageChangeObj = consoleAverage.averageChange;
 // console.log : return Average Change value
 console.log(`Average Change: ${averageChangeObj}`);
 
-// greatestIncreaseFu : show greater increase
+// greatestIncreaseFu : calculate the greater increase
 
 const greatestIncreaseFu = () => {
   let profitGain;
@@ -158,7 +158,7 @@ const greatestIncreaseFu = () => {
   };
 };
 
-// consoleIncrease : return consoleIncrease object values
+// consoleIncrease : return greatestIncreaseFu object values
 
 const consoleIncrease = greatestIncreaseFu();
 let profitGainObj = consoleIncrease.profitGain;
@@ -168,7 +168,7 @@ let gainMonthObj = consoleIncrease.gainMonth;
 
 console.log(`Greatest Increase: ${gainMonthObj} (${profitGainObj})`);
 
-// greatestDecreaseFu : show greater decrease
+// greatestDecreaseFu : calculate the greater decrease
 
 const greatestDecreaseFu = () => {
   let profitLoss;
@@ -188,7 +188,7 @@ const greatestDecreaseFu = () => {
   };
 };
 
-// consoleDecrease : return consoleDecrease object values
+// consoleDecrease : return greatestDecreaseFu object values
 
 const consoleDecrease = greatestDecreaseFu();
 let profitLossObj = consoleDecrease.profitLoss;
