@@ -123,7 +123,77 @@ const averageChangeFu = () => {
     (acc, val) => {
       return acc + val;
     }, 0) / (totalMonthsFu() - 1);
-    return averageChange.toFixed(2);
+    return {
+      changes: changes,
+      averageChange: averageChange.toFixed(2)
+    };
 };
 
-console.log(`Average Change: ${averageChangeFu()}`);
+// consoleAverage : return object values
+
+const consoleAverage = averageChangeFu();
+let changesObj = consoleAverage.changes;
+let averageChangeObj = consoleAverage.averageChange;
+
+// console.log : return Average Change value
+console.log(`Average Change: ${averageChangeObj}`);
+
+// greatestIncreaseFu : show greater increase
+
+const greatestIncreaseFu = () => {
+  let profitGain;
+  let gainMonth;
+  
+  profitGain = changesObj[0];
+
+  for (let change of changesObj) {
+    if (profitGain < change) {
+      profitGain = change;
+      gainMonth = finances[changesObj.indexOf(change) + 1][0];
+    };
+  };
+  return {
+    profitGain: profitGain,
+    gainMonth: gainMonth
+  };
+};
+
+// consoleIncrease : return consoleIncrease object values
+
+const consoleIncrease = greatestIncreaseFu();
+let profitGainObj = consoleIncrease.profitGain;
+let gainMonthObj = consoleIncrease.gainMonth;
+
+// console.log : return Greatest Increase values
+
+console.log(`Greatest Increase: ${gainMonthObj} (${profitGainObj})`);
+
+// greatestDecreaseFu : show greater decrease
+
+const greatestDecreaseFu = () => {
+  let profitLoss;
+  let lossMonth;
+  
+  profitLoss = changesObj[0];
+
+  for (let change of changesObj) {
+    if (profitLoss > change) {
+      profitLoss = change;
+      lossMonth = finances[changesObj.indexOf(change) + 1][0];
+    };
+  };
+  return {
+    profitLoss: profitLoss,
+    lossMonth: lossMonth
+  };
+};
+
+// consoleDecrease : return consoleDecrease object values
+
+const consoleDecrease = greatestDecreaseFu();
+let profitLossObj = consoleDecrease.profitLoss;
+let lossMonthObj = consoleDecrease.lossMonth;
+
+// console.log : return Greatest Decrease values
+
+console.log(`Greatest Decrease: ${lossMonthObj} (${profitLossObj})`);
