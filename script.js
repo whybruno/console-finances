@@ -197,3 +197,11 @@ let lossMonthObj = consoleDecrease.lossMonth;
 // console.log : return Greatest Decrease values
 
 console.log(`Greatest Decrease: ${lossMonthObj} (${profitLossObj})`);
+
+// display results of functions to index.html
+
+  document.getElementById('totalMonths').innerHTML = totalMonthsFu();
+  document.getElementById('totalNet').innerHTML = totalNetFu();
+  document.getElementById('averageChange').innerHTML = averageChangeObj;
+  document.getElementById('greatestIncrease').innerHTML = `${gainMonthObj} (${profitGainObj})`;
+  document.getElementById('greatestDecrease').innerHTML = `${lossMonthObj} (${profitLossObj})`;
